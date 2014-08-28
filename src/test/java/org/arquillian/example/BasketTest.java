@@ -26,7 +26,6 @@ public class BasketTest {
   public static JavaArchive createDeployment() {
     return ShrinkWrap.create(JavaArchive.class, "test.jar")
             .addClasses(Basket.class, OrderRepository.class, SingletonOrderRepository.class)
-            .addPackage(Basket.class.getPackage())
             .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
   }
 
